@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import struct
-from collection import namedtuple
+from collections import namedtuple
 import pprint 
 
 class datahandler:
@@ -9,3 +9,5 @@ class datahandler:
         self.compress = ''
         self.format = ''
         self.size = 0
+    def dataformatsize(self):
+        return struct.calcsize(self.format)
